@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Bungee+Tint&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Baskervville SC", serif;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon_area {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon_name {
+    font-weight: bold;
+}
+
+.menu_area {
+    margin-right: 10px;
+}
+
+.menu_area ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu_area li {
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+}
+
+.menu_area li:hover {
+    background-color: aliceblue;
+    transform: scale(1.1);
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.main_content {
+    background-image: url(main.png);
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main_heading {
+    font-family: "Bungee Tint", system-ui;
+}
+
+/* ================= SERVICES ================= */
+
+.services_heading {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.card {
+    max-width: 300px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+/* ================= ABOUT ================= */
+
+.about_us {
+    padding: 40px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: aliceblue;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.img1 {
+    max-width: 500px;
+    width: 100%;
+}
+
+.side_text {
+    max-width: 500px;
+    text-align: justify;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery_text {
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.gallery_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery_images img {
+    max-width: 400px;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.gallery_images img:hover {
+    transform: scale(1.08);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background-color: rgb(54, 28, 28);
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+    .menu_area {
+        display: none;
+    }
+
+    .side_text {
+        padding: 10px;
+    }
+
+    .gallery_text {
+        margin-top: 20px;
+    }
+}
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    .services {
+        justify-content: center;
+    }
+
+    .about_us {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .side_text {
+        max-width: 90%;
+        text-align: justify;
+    }
+
+    .img1 {
+        max-width: 90%;
+    }
+
+    .gallery_images img {
+        max-width: 300px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 700px) {
+
+    /* Header */
+    .header {
+        flex-direction: row;
+        padding: 0 10px;
+    }
+
+    .menu_area {
+        display: none; /* hide menu for mobile */
+    }
+
+    /* Hero Section */
+    .main_content {
+        height: 350px;
+        padding: 20px;
+    }
+
+    .main_heading {
+        font-size: 24px;
+    }
+
+    .main_content p {
+        font-size: 14px;
+    }
+
+    /* Services */
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    /* About Us */
+    .about_us {
+        padding: 20px 10px;
+    }
+
+    /* Gallery */
+    .gallery_images img {
+        max-width: 90%;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 400px) {
+
+    .main_heading {
+        font-size: 20px;
+    }
+
+    .icon_name {
+        font-size: 14px;
+    }
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+a:hover{
+    text-decoration: underline;
+    margin-top: 2px;
+}
